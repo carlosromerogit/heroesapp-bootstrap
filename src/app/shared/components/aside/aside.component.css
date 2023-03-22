@@ -1,0 +1,10 @@
+.list-group-item {
+  color: var(--white-1);
+  background-color: var(--gray-3);
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 3rem 0.5rem 1rem;
+}
+.list-group-item:hover {
+  background-color: var(--gray-2);
+}

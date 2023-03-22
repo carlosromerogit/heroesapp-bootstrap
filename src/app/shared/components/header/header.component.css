@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  background-color: var(--gray-2);
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle::after {
+  content: "";
+  display: none;
+}
+.dropdown-menu {
+  background-color: var(--gray-2);
+}
+.dropdown-item {
+  color: var(--white-1);
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: var(--gray-1);
+  color: var(--white-1);
+}

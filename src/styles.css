@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --gray-1: #495057;
+  --gray-2: #343a40;
+  --gray-3: #212529;
+  --white-1: #f8f9fa;
+  --white-2: #f1f3f5;
+  --white-3: #e9ecef;
+  --white-4: #ced4da;
+  --red-1: #f03e3e;
+  --red-2: #e03131;
+  --red-3: #c92a2a;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  background-color: var(--gray-3);
+  color: var(--white-1);
+  font-family: sans-serif;
+  height: 100vh;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}
+p {
+  color: var(--white-3);
+}
+h1 {
+  margin: 0px;
+}
