@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-heroe',
@@ -7,10 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./heroe.component.css'],
 })
 export class HeroeComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private HeroesService: HeroesService
+  ) {}
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(console.log);
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    this.activatedRoute.params
+      .pipe(switchMap(({ id }) => this.HeroesService.getHeroeById(id)))
+      .subscribe(console.log);
   }
 }

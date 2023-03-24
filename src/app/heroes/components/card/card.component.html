@@ -8,8 +8,12 @@
     <h5 class="card-title">{{ heroe.superhero }}</h5>
     <p>{{ heroe.alter_ego }}</p>
     <ul class="list-group list-group-flush mb-3">
-      <li class="list-group-item"><Strong>Primera aparición</Strong></li>
-      <li class="list-group-item"><strong>Personaje</strong></li>
+      <li class="list-group-item">
+        <Strong>Primera aparición</Strong>: {{ heroe.first_appearance }}
+      </li>
+      <li class="list-group-item">
+        <strong>Personaje</strong>: {{ heroe.characters }}
+      </li>
     </ul>
     <a
       [routerLink]="['/heroes/heroe', heroe.id]"
