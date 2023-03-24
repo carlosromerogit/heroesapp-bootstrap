@@ -23,6 +23,7 @@ body {
   color: var(--white-1);
   font-family: sans-serif;
   height: 100vh;
+  overflow-x: hidden;
 }
 #app {
   display: flex;

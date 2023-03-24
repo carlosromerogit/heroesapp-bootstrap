@@ -1,0 +1,14 @@
+.card {
+  background-color: var(--gray-2);
+}
+.card .btn {
+  padding: 0.2rem 0.5rem;
+}
+.list-group {
+  background-color: transparent;
+}
+.list-group-item {
+  color: var(--white-3);
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

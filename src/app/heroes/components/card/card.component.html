@@ -1,0 +1,25 @@
+<div class="card rounded-0">
+  <img
+    [src]="heroe | image"
+    class="card-img-top img-fluid"
+    [alt]="heroe.superhero"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ heroe.superhero }}</h5>
+    <p>{{ heroe.alter_ego }}</p>
+    <ul class="list-group list-group-flush mb-3">
+      <li class="list-group-item"><Strong>Primera aparición</Strong></li>
+      <li class="list-group-item"><strong>Personaje</strong></li>
+    </ul>
+    <a
+      [routerLink]="['/heroes/heroe', heroe.id]"
+      class="btn btn-secondary me-1 rounded-0"
+      >Ver héroe</a
+    >
+    <a
+      [routerLink]="['/heroes/edit', heroe.id]"
+      class="btn btn-outline-secondary rounded-0"
+      >Editar</a
+    >
+  </div>
+</div>
