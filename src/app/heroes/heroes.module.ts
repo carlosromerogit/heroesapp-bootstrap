@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { CardComponent } from './components/card/card.component';
 import { ImagePipe } from './pipes/image.pipe';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ImagePipe } from './pipes/image.pipe';
     HomeComponent,
     CardComponent,
     ImagePipe,
+    SearchComponent,
   ],
   imports: [CommonModule, HeroesRoutingModule, SharedModule],
 })

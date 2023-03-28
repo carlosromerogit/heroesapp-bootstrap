@@ -1,0 +1,26 @@
+<h4>Buscar heroe</h4>
+<hr />
+<div class="w-50">
+  <div class="dropdown">
+    <input
+      #input
+      (input)="sendQuery()"
+      class="form-control"
+      type="text"
+      placeholder="Buscar"
+    />
+    <div class="list-group" *ngIf="results && query">
+      <a
+        class="list-group-item list-group-item-action"
+        *ngFor="let heroe of results"
+        [routerLink]="['../heroe', heroe.id]"
+        >{{ heroe.superhero }} | {{ heroe.alter_ego }}</a
+      >
+      <a
+        class="list-group-item list-group-item-action"
+        *ngIf="results.length == 0 && query.length > 0"
+        >No se encontró ningún héroe</a
+      >
+    </div>
+  </div>
+</div>

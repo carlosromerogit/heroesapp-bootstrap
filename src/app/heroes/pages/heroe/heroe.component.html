@@ -1,2 +1,28 @@
-<a routerLink="/heroes">Ir a inicio</a>
-<p>heroe works!</p>
+<div *ngIf="!heroe; else p" class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<ng-template #p>
+  <div class="container-fluid row">
+    <div class="col-12 col-sm-6 mb-2">
+      <h3>{{ heroe.superhero }}</h3>
+      <hr />
+      <img class="img-fluid" [src]="heroe | image" [alt]="heroe.superhero" />
+    </div>
+    <div class="col-12 col-sm-6">
+      <h3>{{ heroe.publisher }}</h3>
+      <hr />
+      <p>{{ heroe.first_appearance }}</p>
+      <p>{{ heroe.characters }}</p>
+      <p>{{ heroe.publisher }}</p>
+      <p>{{ heroe.alter_ego }}</p>
+      <a
+        routerLink="/heroes/list"
+        class="btn btn-outline-secondary"
+        role="button"
+        >Regresar</a
+      >
+    </div>
+  </div>
+</ng-template>
