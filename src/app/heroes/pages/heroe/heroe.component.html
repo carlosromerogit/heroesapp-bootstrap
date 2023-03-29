@@ -17,11 +17,14 @@
       <p>{{ heroe.characters }}</p>
       <p>{{ heroe.publisher }}</p>
       <p>{{ heroe.alter_ego }}</p>
+      <a routerLink="/heroes/list" class="btn btn-secondary me-2" role="button"
+        >Regresar</a
+      >
       <a
-        routerLink="/heroes/list"
+        [routerLink]="['/heroes/edit', heroe.id]"
         class="btn btn-outline-secondary"
         role="button"
-        >Regresar</a
+        >Editar</a
       >
     </div>
   </div>

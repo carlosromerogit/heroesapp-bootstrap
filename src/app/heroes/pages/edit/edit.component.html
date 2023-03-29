@@ -1,2 +1,25 @@
-<a routerLink="/heroes/">Ir a inicio</a>
-<p>edit works!</p>
+<div
+  *ngIf="!heroe; else p"
+  class="container-fluid d-flex justify-content-center"
+>
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<ng-template #p>
+  <h3 class="mb-4">Editar héroe</h3>
+  <div class="row">
+    <app-form
+      class="col-12 col-md-6"
+      btnLabel="Editar"
+      [onEdit]="true"
+      [onAdd]="false"
+      [heroe]="heroe"
+    ></app-form>
+    <img
+      class="col-12 col-md-6"
+      [src]="heroe | image"
+      [alt]="heroe.superhero"
+    />
+  </div>
+</ng-template>

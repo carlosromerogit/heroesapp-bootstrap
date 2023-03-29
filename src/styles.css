@@ -37,3 +37,26 @@ p {
 h1 {
   margin: 0px;
 }
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem var(--gray-1);
+}
+.form-floating > label {
+  color: #212529;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  /* height: 0px; */
+}
+.modal.fade .modal-dialog {
+  transform: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal {
+  color: #212529;
+}
+.btn-close:focus {
+  box-shadow: 0 0 0 0.25rem var(--gray-1);
+}
